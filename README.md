@@ -129,14 +129,13 @@ TiffinManagement/
 │   ├── Order.cs
 │   ├── Payment.cs
 │   ├── Delivery.cs
-│   └── DTOs/
+│   └── TiffinPlan.cs
 │
 ├── Services/
-│   ├── Interfaces/
-│   ├── Implementations/
+│   ├── Interfaces and Implementations
 │
-├── Data/
-│   └── ApplicationDbContext.cs
+├── Repository/
+│   └── AppDbContext.cs
 │
 ├── appsettings.json
 └── Program.cs
@@ -156,11 +155,25 @@ curl -X POST http://localhost:5000/api/user -H "Content-Type: application/json" 
 
 ```json
 {
-  "totalOrders": 120,
-  "totalRevenue": 45000,
-  "newUsers": 25,
-  "successfulDeliveries": 110,
-  "pendingOrders": 10
+  "totalOrders": 14,
+  "ordersByStatus": {
+    "Active": 6,
+    "Cancelled": 1,
+    "Completed": 3,
+    "Pending": 4
+  },
+  "popularTiffinPlans": {
+    "Deluxe Veg": 5,
+    "Basic Veg": 1,
+    "Basic Non-Veg": 1,
+    "Deluxe Non-Veg": 1,
+    "Keto Plan": 1
+  },
+  "totalRevenue": 23110,
+  "deliverySuccessRate": 70,
+  "newOrdersThisWeek": 0,
+  "newCustomers": 9,
+  "returningCustomers": 0
 }
 ```
 

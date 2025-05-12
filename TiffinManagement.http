@@ -1,0 +1,6 @@
+@TiffinManagement_HostAddress = http://localhost:5143
+
+GET {{TiffinManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
